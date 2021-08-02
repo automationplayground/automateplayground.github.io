@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Robot Playground</title>
-    <link rel="stylesheet" href="../asset/bootstrap.min.css">
-    <link rel="stylesheet" href="../asset/style.css">
-    <script type="text/javascript" src="../asset/function.js"></script>
-    <script type="text/javascript" src="./asset/font-icon.js"></script>
+    <link rel="stylesheet" href="./playground/asset/bootstrap.min.css">
+    <link rel="stylesheet" href="./playground/asset/style.css">
+    <script type="text/javascript" src="./playground/asset/function.js"></script>
+    <script type="text/javascript" src="./playground/asset/font-icon.js"></script>
 </head>
 
 <body>
@@ -50,8 +50,7 @@
                     <h5>Instruction</h5>
                     <ol>
                         <li>Open Chrome brower</li>
-                        <li>Open link <a
-                                href="http://172.30.18.3:5000/login.html">http://172.30.18.3:5000/login.html</a></li>
+                        <li>Open link <a href="http://172.30.18.3:5000/login.html">http://172.30.18.3:5000/login.html</a></li>
                         <li>Open Chrome developer tool to inspect locators</li>
                         <li>Collect all locators in robot variables</li>
                     </ol>
@@ -81,28 +80,25 @@
                     <h6>Introduce 3 General Xpath Forms</h6>
                     <ol>
                         <li>//tagname[@attribute='value']
-                        <li>//tagname[text()='inner_html_text']</li>
-                        <li>//tagname[contains(@attribute or function, 'value')]</li>
+                            <li>//tagname[text()='inner_html_text']</li>
+                            <li>//tagname[contains(@attribute or function, 'value')]</li>
                     </ol>
                     <!--  
                         1. Use when the element has a <i class="guide">unique attribute</i> such as <i class="guide">id, name</i></li>
                         2. Use when the element might not has unique attribute or  -->
                     <h6>Get Xpath with Developer Tool</h6>
                     <p>- Open developer tools by <i class="guide">press "F12"</i> or <i class="guide">right click and
-                            select inspect</i>. Then, the dev tool with <i class="guide">Elements tab</i> will display
-                        on your browser!</p>
+                            select inspect</i>. Then, the dev tool with <i class="guide">Elements tab</i> will display on your browser!</p>
                     <ol>
-                        <li>Click this icon <img style="width: 23px;" src="./images/cursor.png" alt=""> to activate
-                            inspector</li>
+                        <li>Click this icon <img style="width: 23px;" src="./images/cursor.png" alt=""> to activate inspector
+                        </li>
                         <li>Move the cursor to element, then click</li>
                         <li>HTML of the element will be highlighted</li>
                         <li>Click anywhere on the Element tab to focus, then Press <i class="guide">"Ctrl+F"</i> or <i class="guide">"Command + F"</i>, a search box will be displayed</li>
                         <li><i class="guide">Select a Xpath form</i> for the element</li>
-                        <img class="shadow" style="border:0.5px solid rgb(233, 233, 233); width: 680px;"
-                        src="./images/x_g1.png">
+                        <img class="shadow" style="border:0.5px solid rgb(233, 233, 233); width: 680px;" src="./images/x_g1.png">
                         <li><i class="guide">Replace with its tagname, attribute name and value</i> or proper value for others Xpath forms such as Text</li>
-                        <img class="shadow" style="border:0.5px solid rgb(233, 233, 233); width: 680px;"
-                        src="./images/x_g2.png">
+                        <img class="shadow" style="border:0.5px solid rgb(233, 233, 233); width: 680px;" src="./images/x_g2.png">
                     </ol>
                 </div>
             </div>
@@ -128,15 +124,15 @@
                             <li>Click Element: Sign In button</li>
                         </ol>
                         <li>Submit application form</li>
-                            <ol>
-                                <li>Input Text: Firstname</li>
-                                <li>Input Text: Lastname</li>
-                                <!-- <li>Select Radio Button: Gender</li> -->
-                                <li>Select From List by Label: Birth Date</li>
-                                <li>Choose File: Attachment 1 & 2</li>
-                                <li>Select Checkbox: Agree & Confirm</li>
-                                <li>Click Element: Submit Button</li>
-                            </ol>
+                        <ol>
+                            <li>Input Text: Firstname</li>
+                            <li>Input Text: Lastname</li>
+                            <!-- <li>Select Radio Button: Gender</li> -->
+                            <li>Select From List by Label: Birth Date</li>
+                            <li>Choose File: Attachment 1 & 2</li>
+                            <li>Select Checkbox: Agree & Confirm</li>
+                            <li>Click Element: Submit Button</li>
+                        </ol>
                     </ol>
                     <i>Optional:
                         <ul>
@@ -150,7 +146,7 @@
                     <a href="http://172.30.18.3:5000/images/login.png">
                         <img class="shadow" src="./images/login.png" alt="login_page">
                     </a>
-                    
+
                     <a href="http://172.30.18.3:5000/images/home.png">
                         <img class="shadow" src="./images/home.png" alt="home_page">
                     </a>

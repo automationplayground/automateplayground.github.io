@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../asset/bootstrap.min.css">
-    <link rel="stylesheet" href="../asset/style.css">
-    <script type="text/javascript" src="../asset/function.js"></script>
-    <script type="text/javascript" src="./asset/font-icon.js"></script>
+    <link rel="stylesheet" href="./playground/asset/bootstrap.min.css">
+    <link rel="stylesheet" href="./playground/asset/style.css">
+    <script type="text/javascript" src="./playground/asset/function.js"></script>
+    <script type="text/javascript" src="./playground/asset/font-icon.js"></script>
 </head>
 <script>
     if (localStorage.getItem("login") != "true") {
@@ -51,12 +51,10 @@
                         <select name="birthdate" id="dBirth">
                             <option value="0">--</option>
 
-                        </select>
-                        /
+                        </select> /
                         <select name="birth-date" id="mBirth">
                             <option value="0">--</option>
-                        </select>
-                        /
+                        </select> /
                         <select name="birth-date" id="yBirth">
                             <option value="0000">--</option>
                         </select>
@@ -67,35 +65,35 @@
             <hr>
             <section>
                 <h3 class="topic-header">Document</h3>
-                    <div id="docForm" class="input-field row">
-                        <label class="col-sm-5">1. สำเนาบัตรพนักงาน</label>
-                        <input class="col-sm-6" name="ifile1" type="file">
-                    </div>
-                    <div id="docForm" class="input-field row">
-                        <label class="col-sm-5">2. Copy of Thai ID card</label>
-                        <input class="col-sm-6" name="ifile2" type="file">
-                    </div>
-                    <br>
+                <div id="docForm" class="input-field row">
+                    <label class="col-sm-5">1. สำเนาบัตรพนักงาน</label>
+                    <input class="col-sm-6" name="ifile1" type="file">
+                </div>
+                <div id="docForm" class="input-field row">
+                    <label class="col-sm-5">2. Copy of Thai ID card</label>
+                    <input class="col-sm-6" name="ifile2" type="file">
+                </div>
+                <br>
             </section>
             <hr>
             <section>
                 <h3 class="topic-header">Terms & Conditions</h3>
-                    <div id="agreeForm" class="input-field">
-                        <div>
-                            <input id="agreement" name="cb1" type="checkbox">
-                            <label id="agreement" for="agreement">Agree to insert data</label>
+                <div id="agreeForm" class="input-field">
+                    <div>
+                        <input id="agreement" name="cb1" type="checkbox">
+                        <label id="agreement" for="agreement">Agree to insert data</label>
 
-                        </div>
-                        <div>
-                            <input id="agreement" name="cb2" type="checkbox">
-                            <label id="agreement" for="agreement">Confirm document is valid </label>
-                        </div>
                     </div>
-                    <br>
-                    <button class="confirm-btn" onclick="confirmProfile()">Submit</button>
-                    <div class="row">
-                        <p id="tran-stat"></p>
+                    <div>
+                        <input id="agreement" name="cb2" type="checkbox">
+                        <label id="agreement" for="agreement">Confirm document is valid </label>
                     </div>
+                </div>
+                <br>
+                <button class="confirm-btn" onclick="confirmProfile()">Submit</button>
+                <div class="row">
+                    <p id="tran-stat"></p>
+                </div>
                 <hr>
             </section>
 
