@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/style.css">
+    <script type="text/javascript" src="../asset/function.js"></script>
+    <script type="text/javascript" src="./asset/font-icon.js"></script>
+</head>
+<script>
+    if (localStorage.getItem("login") != "true") {
+        document.location.href = "login.html";
+    }
+</script>
+
+<body>
+    <header>
+        <nav class="navbar shadow" style="background-color: #ffc117;">
+            <span class="logo">Robot Playground</span>
+            <ul class="menu">
+                <li id="robot_example-menu logout" onclick="logout()" class="menu-list">log out</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <section>
+                <a href="http://172.30.18.3:5000/index.html" target="_blank"><button class="hint-btn" onclick="hintPersonal()">Hint</button></a>
+                <h2>Personal Profile</h2>
+                <hr>
+            </section>
+            <section>
+                <h3 class="topic-header">Profile</h3>
+                <div class="row">
+                    <div id="first-nameForm" class="input-field col">
+                        <label for="first-name">Firstname: <span class="require">*</span></label>
+                        <input id="first-name" name="first-name" type="text">
+                    </div>
+                    <div id="last-nameForm" class="input-field col">
+                        <label for="last-name">Lastname: <span class="require">*</span></label>
+                        <input id="last-name" name="last-name" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="birthDateForm" class="input-field col">
+                        <label for="birthdate">Birth Date : <span class="require">*</span></label>
+                        <select name="birthdate" id="dBirth">
+                            <option value="0">--</option>
+
+                        </select>
+                        /
+                        <select name="birth-date" id="mBirth">
+                            <option value="0">--</option>
+                        </select>
+                        /
+                        <select name="birth-date" id="yBirth">
+                            <option value="0000">--</option>
+                        </select>
+                    </div>
+                </div>
+
+            </section>
+            <hr>
+            <section>
+                <h3 class="topic-header">Document</h3>
+                    <div id="docForm" class="input-field row">
+                        <label class="col-sm-5">1. สำเนาบัตรพนักงาน</label>
+                        <input class="col-sm-6" name="ifile1" type="file">
+                    </div>
+                    <div id="docForm" class="input-field row">
+                        <label class="col-sm-5">2. Copy of Thai ID card</label>
+                        <input class="col-sm-6" name="ifile2" type="file">
+                    </div>
+                    <br>
+            </section>
+            <hr>
+            <section>
+                <h3 class="topic-header">Terms & Conditions</h3>
+                    <div id="agreeForm" class="input-field">
+                        <div>
+                            <input id="agreement" name="cb1" type="checkbox">
+                            <label id="agreement" for="agreement">Agree to insert data</label>
+
+                        </div>
+                        <div>
+                            <input id="agreement" name="cb2" type="checkbox">
+                            <label id="agreement" for="agreement">Confirm document is valid </label>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="confirm-btn" onclick="confirmProfile()">Submit</button>
+                    <div class="row">
+                        <p id="tran-stat"></p>
+                    </div>
+                <hr>
+            </section>
+
+            <section>
+                <h3 class="topic-header">Data Table</h3>
+                <center>
+                    <table id="data">
+                        <thead>
+                            <tr>
+                                <th>no</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <!-- <th>Gender</th> -->
+                                <th>Birth Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-content">
+                            <tr id="no-data">
+                                <td colspan="4" style="text-align: center;">No data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+            </section>
+        </div>
+    </div>
+
+    <footer class="center">
+        <div>
+            <p class="text-footer">Hmm!? Do you need any support?</p>
+            <br>
+            <p class="text-footer">Just Ask your TA</p>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="./asset/home.js"></script>
+
+</html>

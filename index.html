@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Robot Playground</title>
+    <link rel="stylesheet" href="../asset/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/style.css">
+    <script type="text/javascript" src="../asset/function.js"></script>
+    <script type="text/javascript" src="./asset/font-icon.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar shadow" style="background-color: #ffc117;">
+            <span class="logo">Robot Playground</span>
+            <ul class="menu">
+                <li id="about_me-menu" class="menu-list" onclick="scrollToId('testdata')">Test Data</li>
+                <li id="experience-menu" class="menu-list" onclick="scrollToId('2.1')">Lab 2.1</li>
+                <li id="my_contact-menu" class="menu-list" onclick="scrollToId('2.2')">Lab 2.2</li>
+                <li id="robot_example-menu" class="menu-list" onclick="scrollToId('workshop')">Workshop Web</li>
+            </ul>
+        </nav>
+    </header>
+    <section id="testdata">
+        <div class="container shadow">
+            <div class="row">
+                <h4>Test Data</h4>
+                <hr>
+                <h5>Login Page</h5>
+                <p>Username: username</p>
+                <p>Password: P@ssw0rd</p>
+                <hr>
+                <h5>Home Page</h5>
+                <p>Please use your own profile</p>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section id="2.1">
+        <div class="container shadow">
+            <div class="row">
+                <h4>Lab 2.1: Finding Locators</h4>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5>Instruction</h5>
+                    <ol>
+                        <li>Open Chrome brower</li>
+                        <li>Open link <a
+                                href="http://172.30.18.3:5000/login.html">http://172.30.18.3:5000/login.html</a></li>
+                        <li>Open Chrome developer tool to inspect locators</li>
+                        <li>Collect all locators in robot variables</li>
+                    </ol>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <h5>Xpath Concept</h5>
+                <div class="col">
+                    <h6>Xpath General Form</h6>
+                    <a href="http://172.30.18.3:5000/images/xpath_concept.png">
+                        <img class="shadow" src="./images/xpath_concept.png" alt="">
+                    </a>
+                </div>
+                <div class="col">
+                    <h6>Locator Strategy</h6>
+                    <a href="http://172.30.18.3:5000/images/locator_strategy.png" target="_blank">
+                        <img src="./images/locator_strategy.png" alt="" class="shadow">
+                    </a>
+                </div>
+                <i>Click image to view full-size</i>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5>Guide Finding Xpath (Easy mode)</h5>
+                    <h6>Introduce 3 General Xpath Forms</h6>
+                    <ol>
+                        <li>//tagname[@attribute='value']
+                        <li>//tagname[text()='inner_html_text']</li>
+                        <li>//tagname[contains(@attribute or function, 'value')]</li>
+                    </ol>
+                    <!--  
+                        1. Use when the element has a <i class="guide">unique attribute</i> such as <i class="guide">id, name</i></li>
+                        2. Use when the element might not has unique attribute or  -->
+                    <h6>Get Xpath with Developer Tool</h6>
+                    <p>- Open developer tools by <i class="guide">press "F12"</i> or <i class="guide">right click and
+                            select inspect</i>. Then, the dev tool with <i class="guide">Elements tab</i> will display
+                        on your browser!</p>
+                    <ol>
+                        <li>Click this icon <img style="width: 23px;" src="./images/cursor.png" alt=""> to activate
+                            inspector</li>
+                        <li>Move the cursor to element, then click</li>
+                        <li>HTML of the element will be highlighted</li>
+                        <li>Click anywhere on the Element tab to focus, then Press <i class="guide">"Ctrl+F"</i> or <i class="guide">"Command + F"</i>, a search box will be displayed</li>
+                        <li><i class="guide">Select a Xpath form</i> for the element</li>
+                        <img class="shadow" style="border:0.5px solid rgb(233, 233, 233); width: 680px;"
+                        src="./images/x_g1.png">
+                        <li><i class="guide">Replace with its tagname, attribute name and value</i> or proper value for others Xpath forms such as Text</li>
+                        <img class="shadow" style="border:0.5px solid rgb(233, 233, 233); width: 680px;"
+                        src="./images/x_g2.png">
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="2.2">
+        <div class="container shadow">
+            <div class="row">
+                <h4>Lab 2.2: Automate Web</h4>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5>Instruction</h5>
+                    <ol>
+                        <li>Open Chrome browser</li>
+                        <li>Login to the web application</li>
+                        <ol>
+                            <li>Verify: Is login page</li>
+                            <li>Input Text: Username</li>
+                            <li>Input Text: Password</li>
+                            <li>Click Element: Sign In button</li>
+                        </ol>
+                        <li>Submit application form</li>
+                            <ol>
+                                <li>Input Text: Firstname</li>
+                                <li>Input Text: Lastname</li>
+                                <!-- <li>Select Radio Button: Gender</li> -->
+                                <li>Select From List by Label: Birth Date</li>
+                                <li>Choose File: Attachment 1 & 2</li>
+                                <li>Select Checkbox: Agree & Confirm</li>
+                                <li>Click Element: Submit Button</li>
+                            </ol>
+                    </ol>
+                    <i>Optional:
+                        <ul>
+                            <li>Grouping the keywords</li>
+                            <li>Verify the insert status (under "Submit Button")</li>
+                            <li>Verify the inserted data</li>
+                        </ul>
+                    </i>
+                </div>
+                <div class="col">
+                    <a href="http://172.30.18.3:5000/images/login.png">
+                        <img class="shadow" src="./images/login.png" alt="login_page">
+                    </a>
+                    
+                    <a href="http://172.30.18.3:5000/images/home.png">
+                        <img class="shadow" src="./images/home.png" alt="home_page">
+                    </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section id="workshop">
+        <div class="container center shadow">
+            <div style="margin-top: 50px;">
+                <h2>Let's go to Robot Framework Playground...</h2>
+                <p>If you're looking for a place to improve your automation skills. Do not miss it!</p>
+            </div>
+            <a class="non-decoration" href="./login.html">
+                <div class="practice-robot-btn shadow">Practice Robot</div>
+            </a>
+        </div>
+    </section>
+
+    </div>
+    <footer class="center">
+        <div>
+            <p class="text-footer">Hmm!? Do you need any support?</p>
+            <br>
+            <p class="text-footer">Just Ask your TA</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
