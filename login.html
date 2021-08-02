@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/style.css">
+    <script type="text/javascript" src="../asset/function.js"></script>
+    <script type="text/javascript" src="./asset/font-icon.js"></script>
+</head>
+
+<body>
+    <div class="container center">
+        <h2 style="background: #ffc117;padding: 10px;">Welcome to Robot Framework Playground</h2>
+        <div style="background: rgb(255, 255, 255);">
+            <a href="http://172.30.18.3:5000/index.html" target="_blank"><button class="hint-btn" onclick="hintLogin()">Hint</button></a>
+            <div id="username" class="input-field">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id='inp_username'>
+            </div>
+            <div id="password">
+                <label for="pass">Password: </label>
+                <input type="password" name="pass" id='inp_password'>
+            </div>
+            <div class="main-content">
+                <button class="confirm-btn" onclick="signin()">Sign In</button>
+                <a href="index.html"><button class="confirm-btn">Back to Page</button></a>
+            </div>
+            <p id='login_result'></p>
+        </div>
+    </div>
+</body>
+
+
+</html>
