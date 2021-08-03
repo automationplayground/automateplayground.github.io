@@ -13,24 +13,21 @@
 </head>
 
 <body>
-    <div class="container center">
-        <h2 style="background: rgb(98, 203, 201);padding: 10px;">Welcome to Robot Framework Playground</h2>
-        <div style="background: rgb(255, 255, 255);">
-            <!-- <a href="./index.html" target="_blank"><button class="hint-btn" onclick="hintLogin()">Hint</button></a> -->
-            <div id="username" class="input-field">
-                <label for="username">Username: </label>
-                <input type="text" name="username" id='inp_username'>
-            </div>
-            <div id="password">
-                <label for="pass">Password: </label>
-                <input type="password" name="pass" id='inp_password'>
-            </div>
-            <div class="main-content">
-                <button class="confirm-btn" onclick="signin()">Sign In</button>
-                <a href="index.html"><button class="confirm-btn">Back to Page</button></a>
-            </div>
-            <p id='login_result'></p>
+    <div class="login-container">
+        <h4 style="background: rgb(98, 203, 201);padding: 10px;text-align: center;color: white;">Robot Framework Playground</h4>
+        <div id="username" class="input-field row">
+            <label for="username">USERNAME: </label>
+            <input type="text" name="username" id='inp_username'>
         </div>
+        <div id="password" class="input-field row">
+            <label for="pass">PASSWORD: </label>
+            <input type="password" name="pass" id='inp_password'>
+        </div>
+        <div class="main-content center">
+            <button class="confirm-btn" onclick="signin()">Sign In</button>
+            <a href="index.html"><button class="confirm-btn">Back to Page</button></a>
+        </div>
+        <p id='login_result' class="center"></p>
     </div>
 </body>
 

@@ -37,29 +37,50 @@ function scrollToId(id) {
 function confirmProfile() {
     var firstname = checkFirstName()
     var lastname = checkLastName()
-    // var gender = checkGender()
+        // var gender = checkGender()
     var birthdate = checkBirthDate()
-    // var document = checkDocument()
-    // var agree = checkAgree()
-    console.log(document)
+        // var document = checkDocument()
+        // var agree = checkAgree()
+    console.log(firstname)
+    console.log(lastname)
+    console.log(birthdate)
+
+    if (firstname == false) {
+        var tran_stat = document.getElementById("tran-stat")
+        tran_stat.innerText = "Please Insert Firstname"
+        return
+    }
+
+    if (lastname == false) {
+        var tran_stat = document.getElementById("tran-stat")
+        tran_stat.innerText = "Insert Data Status: Lastname"
+        return
+    }
+
+    if (birthdate == false) {
+        var tran_stat = document.getElementById("tran-stat")
+        tran_stat.innerText = "Insert Data Status: Birthdate"
+        return
+    }
+
     if ((firstname && lastname) != false) {
-    // if ((firstname && lastname && gender) != false) {
+        // if ((firstname && lastname && gender) != false) {
         var text_firstname = "Firstname: " + firstname
         var text_lastname = "Lastname: " + lastname
-        // var text_gender = "Gender: " + gender
+            // var text_gender = "Gender: " + gender
         var text_birthdate = "BirthDate: " + birthdate
-        // var text_document = "Document: " + document
-        // var text_agree = "Agreement: " + agree
-        //  alert(
-        //      text_firstname + "\n"
-        //      + text_lastname + "\n"
-        //      + text_gender + "\n"
-        //      + text_birthdate + "\n"
-        //     //  + text_document + "\n"
-        //     //  + text_agree
-        //  )
-        }
-        insertToTable(firstname, lastname, birthdate)
+            // var text_document = "Document: " + document
+            // var text_agree = "Agreement: " + agree
+            //  alert(
+            //      text_firstname + "\n"
+            //      + text_lastname + "\n"
+            //      + text_gender + "\n"
+            //      + text_birthdate + "\n"
+            //     //  + text_document + "\n"
+            //     //  + text_agree
+            //  )
+    }
+    insertToTable(firstname, lastname, birthdate)
 }
 
 function checkFirstName() {
@@ -144,6 +165,7 @@ function checkAgree() {
     form.classList.add("error")
     return false
 }
+
 function insertToTable(firstname, lastname, birthdate) {
     var tran_stat = document.getElementById("tran-stat")
     tran_stat.innerText = "Insert Data Status: Success"
@@ -163,8 +185,8 @@ function insertToTable(firstname, lastname, birthdate) {
     td2.appendChild(document.createTextNode(firstname))
     var td3 = document.createElement('td')
     td3.appendChild(document.createTextNode(lastname))
-    // var td4 = document.createElement('td')
-    // td4.appendChild(document.createTextNode(gender))
+        // var td4 = document.createElement('td')
+        // td4.appendChild(document.createTextNode(gender))
     var td4 = document.createElement('td')
     td4.appendChild(document.createTextNode(birthdate))
 
@@ -172,7 +194,7 @@ function insertToTable(firstname, lastname, birthdate) {
     row.appendChild(td2)
     row.appendChild(td3)
     row.appendChild(td4)
-    // row.appendChild(td5)
+        // row.appendChild(td5)
     tBody.appendChild(row)
 }
 
