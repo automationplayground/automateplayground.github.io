@@ -315,7 +315,7 @@ h3 {
 footer {
     background: rgb(95, 95, 95);
     padding: 12px 0 3px 0;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
