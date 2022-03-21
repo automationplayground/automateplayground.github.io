@@ -44,7 +44,8 @@ function confirmProfile() {
     console.log(firstname)
     console.log(lastname)
     console.log(birthdate)
-
+    console.log("20201202152912")
+    console.log("401001339999001")
     if (firstname == false) {
         var tran_stat = document.getElementById("tran-stat")
         tran_stat.innerText = "Please Insert Firstname"
@@ -80,7 +81,7 @@ function confirmProfile() {
             //     //  + text_agree
             //  )
     }
-    insertToTable(firstname, lastname, birthdate)
+    insertToTable(firstname, lastname, birthdate, 20201202152912, 401001339999001)
 }
 
 function checkFirstName() {
@@ -166,7 +167,7 @@ function checkAgree() {
     return false
 }
 
-function insertToTable(firstname, lastname, birthdate) {
+function insertToTable(firstname, lastname, birthdate, invoid, merchan) {
     var tran_stat = document.getElementById("tran-stat")
     tran_stat.innerText = "Insert Data Status: Success"
     var tBody = document.getElementById("table-content")
@@ -189,11 +190,17 @@ function insertToTable(firstname, lastname, birthdate) {
         // td4.appendChild(document.createTextNode(gender))
     var td4 = document.createElement('td')
     td4.appendChild(document.createTextNode(birthdate))
+    var td5 = document.createElement('td')
+    td5.appendChild(document.createTextNode(invoid))
+    var td6 = document.createElement('td')
+    td6.appendChild(document.createTextNode(merchan))
 
     row.appendChild(td1)
     row.appendChild(td2)
     row.appendChild(td3)
     row.appendChild(td4)
+    row.appendChild(td5)
+    row.appendChild(td6)
         // row.appendChild(td5)
     tBody.appendChild(row)
 }
